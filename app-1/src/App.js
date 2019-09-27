@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
+import Input from './Input'
+import Text from './Text'
 
 class App extends Component {
 
@@ -21,9 +23,8 @@ class App extends Component {
     console.log(this.state)
     return (
       <div className="App">
-        {/* Why is there a type="text"? I don't see what it's doing.  */}
-        <input onChange={(e) => this.handleInputText(e.target.value)} type="text"/>
-        <p>{this.state.text}</p>
+        <Input handleInputText={this.handleInputText}/>
+        <Text text={this.state.text}/>
       </div>
     );
   }
