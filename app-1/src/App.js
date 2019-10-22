@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 const App = () => {
-  const [list, setList] = useState([])
+  const [list, setList] = useState('')
 
   return(
     <div>
