@@ -1,13 +1,12 @@
-import React, {Component} from 'react'
+import React from 'react'
 
-export default class Input extends Component {
-    render() {
-        console.log(this.props)
+export default function Input(props) {
+        console.log(props)
         return(
             <div>
-                <input onChange={(e) => this.props.handleInputText(e.target.value)} type="text"/>
+                <input onChange={(e) => props.handleInputText(e.target.value)} type="text"/>
                 
             </div>
         )
-    }
+
 }

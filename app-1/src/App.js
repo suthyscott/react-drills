@@ -1,33 +1,13 @@
-import React, { Component } from "react";
-import "./App.css";
-import Input from './Input'
-import Text from './Text'
+import React, {useState, useEffect} from 'react';
 
-class App extends Component {
+const App = () => {
+  const [list, setList] = useState([])
 
-  constructor() {
-    super()
-
-    this.state = {
-      text: ""
-    }    
-
-  }
-
-  handleInputText = (value) => {
-    this.setState({
-      text: value
-    })
-  } 
-  render() {
-    console.log(this.state)
-    return (
-      <div className="App">
-        <Input handleInputText={this.handleInputText}/>
-        <Text text={this.state.text}/>
-      </div>
-    );
-  }
+  return(
+    <div>
+      <input onChange={e => setList(e.target.value)}/>
+      {list}
+    </div>
+  )
 }
-
-export default App;
+export default App
